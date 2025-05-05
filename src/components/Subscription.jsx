@@ -3,7 +3,7 @@ import { FaStar } from "react-icons/fa6";
 import { Link } from "react-router";
 
 const Subscription = ({ data }) => {
-  console.log(data);
+  // console.log(data);
   const {
     id,
     thumbnail,
@@ -13,6 +13,7 @@ const Subscription = ({ data }) => {
     features,
     ratings,
     number_of_reviews,
+    subscription_benefits,
   } = data;
 
   return (
@@ -39,14 +40,14 @@ const Subscription = ({ data }) => {
       <div className="mb-4">
         <h3 className="font-medium text-gray-800">Subscription Benefits:</h3>
         <ul className="list-disc list-inside text-gray-600">
-          {data.subscription_benefits.map((item, i) => (
+          {subscription_benefits.map((item, i) => (
             <li key={i}>{item}</li>
           ))}
         </ul>
       </div>
 
       <div className="flex justify-between items-center">
-        <span className="text-yellow-500 flex items-center gap-2 font-semibold">
+        <span className="text-secondary flex items-center gap-2 font-semibold">
           <FaStar></FaStar> {ratings} ({number_of_reviews} reviews)
         </span>
         <Link to={`/green/${id}`} className="btn btn-soft btn-success">

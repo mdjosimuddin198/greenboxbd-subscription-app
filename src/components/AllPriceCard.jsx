@@ -4,7 +4,7 @@ import { useLoaderData } from "react-router";
 
 const AllPriceCard = () => {
   const GreenBddata = useLoaderData();
-  console.log(GreenBddata);
+  // console.log(GreenBddata);
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 ">
       {GreenBddata.map((data) => (
