@@ -1,6 +1,6 @@
 import React from "react";
 import { FaBarsStaggered } from "react-icons/fa6";
-import { NavLink } from "react-router";
+import { Link, NavLink } from "react-router";
 import userIcon from "../assets/user.png";
 import "../index.css";
 
@@ -43,7 +43,9 @@ const NavBar = () => {
         </div>
         <div className="navbar-end gap-4">
           <img src={userIcon} alt="" />
-          <a className="btn bg-base-200 text-white">Log In</a>
+          <Link to="/auth/login" className="btn bg-base-200 text-white ">
+            Log In
+          </Link>
         </div>
       </div>
     </>

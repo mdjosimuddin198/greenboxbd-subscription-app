@@ -5,6 +5,8 @@ import Subscription from "../components/Subscription";
 import Home from "../components/Home";
 import AllPriceCard from "../components/AllPriceCard";
 import PriceDetails from "../components/PriceDetails";
+import Login from "../page/Login";
+import Register from "../page/Register";
 
 const Router = createBrowserRouter([
   {
@@ -39,6 +41,14 @@ const Router = createBrowserRouter([
         Component: PriceDetails,
       },
     ],
+  },
+  {
+    path: "/auth/login",
+    Component: Login,
+  },
+  {
+    path: "/auth/register",
+    Component: Register,
   },
 ]);
 
