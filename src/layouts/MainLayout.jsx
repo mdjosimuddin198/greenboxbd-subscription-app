@@ -3,6 +3,7 @@ import NavBar from "../components/NavBar";
 import Home from "../components/Home";
 import { Outlet } from "react-router";
 import Banar from "../components/Banar";
+import Footer from "../components/Footer";
 
 const MainLayout = () => {
   return (
@@ -13,7 +14,9 @@ const MainLayout = () => {
       <main className="w-11/12 mx-auto py-6 ">
         <Outlet></Outlet>
       </main>
-      <footer className=""></footer>
+      <footer className="">
+        <Footer></Footer>
+      </footer>
     </>
   );
 };

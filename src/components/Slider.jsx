@@ -7,11 +7,13 @@ const images = [
   "https://i.ibb.co.com/KcdMdS7R/image.png",
   "https://i.ibb.co.com/0V6LbGy4/image.png",
   "https://i.ibb.co.com/SXwhDLsD/image.png",
+  "https://i.ibb.co.com/qYd1gQX6/image.png",
+  " https://i.ibb.co.com/hRghY0TX/image.png",
 ];
 
 const Slider = () => {
   return (
-    <section className="flex justify-center items-center py-12 bg-gray-100">
+    <section className="flex justify-center items-center py-12 ">
       <Swiper
         effect={"cards"}
         grabCursor={true}

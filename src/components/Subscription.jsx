@@ -1,7 +1,4 @@
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Pagination, Autoplay } from "swiper/modules";
-import { useLoaderData } from "react-router";
-import { BiCheckCircle, BiXCircle } from "react-icons/bi";
+import React from "react";
 import { FaStar } from "react-icons/fa6";
 
 const Subscription = ({ data }) => {
@@ -16,7 +13,7 @@ const Subscription = ({ data }) => {
       <h2 className="text-2xl font-semibold text-base-200 mb-2">{data.name}</h2>
       <p className="text-3xl text-gray-600 mb-2">
         {data.frequency} —
-        <span className="text-secondary font-bold"> ৳{data.price}</span>
+        <span className="text-secondary font-bold"> ${data.price}</span>
       </p>
       <p className="text-gray-700 mb-4">{data.description}</p>
 
@@ -45,24 +42,6 @@ const Subscription = ({ data }) => {
         <button className="btn btn-soft btn-success">View More</button>
       </div>
     </div>
-  );
-};
-
-const PricingSection = () => {
-  return (
-    <section className="py-10 px-4 bg-gradient-to-br from-amber-50 via-yellow-50 to-lime-50 min-h-screen">
-      <div className="max-w-7xl mx-auto text-center mb-10">
-        <h1 className="text-4xl font-bold">Choose Your Plan</h1>
-        <p className="text-gray-600 mt-2">
-          Find the right subscription for your team
-        </p>
-      </div>
-      <div className="grid md:grid-cols-3 gap-6 justify-center">
-        {pricingData.map((plan) => (
-          <PricingCard key={plan.id} plan={plan} />
-        ))}
-      </div>
-    </section>
   );
 };
 
