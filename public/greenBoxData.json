@@ -1,0 +1,134 @@
+[
+  {
+    "id": 1,
+    "name": "Weekly Veggie Box",
+    "thumbnail": "https://i.ibb.co.com/qYd1gQX6/image.png",
+    "banner": "",
+    "frequency": "Weekly",
+    "price": 499.0,
+    "description": "Perfect for individuals or small families. Enjoy fresh vegetables every week delivered to your doorstep.",
+    "category": "Vegetables",
+    "features": [
+      "8-10 varieties of fresh vegetables",
+      "Locally sourced produce",
+      "Free delivery inside Dhaka"
+    ],
+    "subscription_benefits": [
+      "Flexible pause/resume option",
+      "Weekly menu email",
+      "Member-only offers"
+    ],
+    "ratings": 4.6,
+    "number_of_reviews": 120
+  },
+  {
+    "id": 2,
+    "name": "Monthly Green Box",
+    "thumbnail": "https://i.ibb.co.com/hRghY0TX/image.png",
+    "banner": "",
+    "frequency": "Monthly",
+    "price": 1799.0,
+    "description": "Curated for consistent monthly supply of seasonal and fresh vegetables for your family.",
+    "category": "Vegetables",
+    "features": [
+      "15+ varieties of vegetables",
+      "Includes seasonal items",
+      "Saves money per kg"
+    ],
+    "subscription_benefits": [
+      "Free 1kg vegetable of your choice",
+      "Priority customer support",
+      "5% off on next month renewal"
+    ],
+    "ratings": 4.7,
+    "number_of_reviews": 212
+  },
+  {
+    "id": 3,
+    "name": "Family Value Pack",
+    "thumbnail": "https://i.ibb.co.com/s9VJ9bHn/image.png",
+    "banner": "https://example.com/images/family-pack-banner.jpg",
+    "frequency": "Monthly",
+    "price": 2599.0,
+    "description": "Designed for large families. Packed with a wide selection of vegetables to cover your monthly needs.",
+    "category": "Vegetables",
+    "features": [
+      "20+ kg total",
+      "Family-friendly veggies included",
+      "Eco-packaging"
+    ],
+    "subscription_benefits": [
+      "Free bonus fruit pack",
+      "Loyalty point system",
+      "Home chef recipe guides"
+    ],
+    "ratings": 4.9,
+    "number_of_reviews": 180
+  },
+  {
+    "id": 4,
+    "name": "Trial Veggie Box",
+    "thumbnail": "https://i.ibb.co.com/DHbQ7JDq/image.png",
+    "banner": "https://example.com/images/trial-box-banner.jpg",
+    "frequency": "One-time",
+    "price": 299.0,
+    "description": "First-time user? Try our specially selected trial veggie box and experience the freshness.",
+    "category": "Vegetables",
+    "features": [
+      "5 types of vegetables",
+      "Ideal for testing our service",
+      "1-day delivery"
+    ],
+    "subscription_benefits": [
+      "One-time purchase",
+      "Discount on full subscription",
+      "Includes reusable bag"
+    ],
+    "ratings": 4.3,
+    "number_of_reviews": 65
+  },
+  {
+    "id": 5,
+    "name": "Organic Green Box",
+    "thumbnail": "https://i.ibb.co.com/5hhRQtLw/image.png",
+    "banner": "https://example.com/images/organic-box-banner.jpg",
+    "frequency": "Weekly",
+    "price": 799.0,
+    "description": "Certified organic veggies from trusted farms. Perfect for health-conscious individuals.",
+    "category": "Organic",
+    "features": [
+      "Pesticide-free produce",
+      "Organic certification",
+      "Compostable packaging"
+    ],
+    "subscription_benefits": [
+      "Health tips included",
+      "Weekly organic recipes",
+      "5% cashback"
+    ],
+    "ratings": 4.8,
+    "number_of_reviews": 98
+  },
+  {
+    "id": 6,
+    "name": "Veggie + Fruit Combo",
+    "thumbnail": "https://i.ibb.co.com/Cs8gNwp4/image.png",
+    "banner": "https://example.com/images/combo-box-banner.jpg",
+    "frequency": "Monthly",
+    "price": 2299.0,
+    "description": "Best of both worlds — fresh vegetables and seasonal fruits in one combo box.",
+    "category": "Combo",
+    "features": [
+      "12kg vegetables + 5kg fruits",
+      "Balanced mix for the month",
+      "Saves you time and money"
+    ],
+    "subscription_benefits": [
+      "Fruit of the month bonus",
+      "Special discount coupons",
+      "Free delivery"
+    ],
+    "ratings": 4.7,
+    "number_of_reviews": 140
+  }
+]

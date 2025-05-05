@@ -1,0 +1,25 @@
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap");
+
+@import "tailwindcss";
+@plugin "daisyui" {
+  themes: light --default;
+}
+
+@plugin "daisyui/theme" {
+  name: "light";
+  default: true;
+  --color-primary: #70707020;
+  --color-secondary: #d72050;
+  --color-base-200: #68745c;
+  --color-base-300: #1a1b22;
+  --color-accent: #706f6f;
+}
+
+* {
+  font-family: "Work Sans", sans-serif;
+}
+
+a.active {
+  background: #68745c;
+  color: white;
+}
