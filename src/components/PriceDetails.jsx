@@ -1,11 +1,12 @@
 import React, { useEffect, useState } from "react";
 import { FaStar } from "react-icons/fa6";
 import { useLoaderData, useParams } from "react-router";
+import ReviewSection from "./ReviewSection";
 
 const PriceDetails = () => {
   const [pricecard, setPriceCard] = useState({});
   const data = useLoaderData();
-  console.log(data);
+  // console.log(data);
   const { id } = useParams();
   useEffect(() => {
     const targetPriceCard = data.find((singlePrice) => singlePrice.id == id);
@@ -68,6 +69,7 @@ const PriceDetails = () => {
           </div>
         </div>
       </div>
+      <ReviewSection></ReviewSection>
     </>
   );
 };
