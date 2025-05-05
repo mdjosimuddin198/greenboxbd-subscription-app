@@ -4,6 +4,7 @@ import MainLayout from "../layouts/MainLayout";
 import Subscription from "../components/Subscription";
 import Home from "../components/Home";
 import AllPriceCard from "../components/AllPriceCard";
+import PriceDetails from "../components/PriceDetails";
 
 const Router = createBrowserRouter([
   {
@@ -27,6 +28,15 @@ const Router = createBrowserRouter([
       {
         path: "/cart",
         element: <p>cart section </p>,
+      },
+      {
+        path: "green/:id",
+        loader: async () => {
+          const res = await fetch("/greenBoxData.json");
+          const data = await res.json();
+          return data;
+        },
+        Component: PriceDetails,
       },
     ],
   },

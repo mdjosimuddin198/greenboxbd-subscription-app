@@ -1,26 +1,36 @@
 import React from "react";
 import { FaStar } from "react-icons/fa6";
+import { Link } from "react-router";
 
 const Subscription = ({ data }) => {
   console.log(data);
+  const {
+    id,
+    thumbnail,
+    name,
+    frequency,
+    price,
+    features,
+    ratings,
+    number_of_reviews,
+  } = data;
+
   return (
     <div className="max-w-sm rounded-2xl shadow-lg p-6 bg-white border border-gray-200">
       <img
-        src={data.thumbnail}
-        alt={data.name}
+        src={thumbnail}
+        alt={name}
         className="w-full h-40 object-cover rounded-lg mb-4"
       />
-      <h2 className="text-2xl font-semibold text-base-200 mb-2">{data.name}</h2>
+      <h2 className="text-2xl font-semibold text-base-200 mb-2">{name}</h2>
       <p className="text-3xl text-gray-600 mb-2">
-        {data.frequency} —
-        <span className="text-secondary font-bold"> ${data.price}</span>
+        {frequency} —<span className="text-secondary font-bold"> ${price}</span>
       </p>
-      <p className="text-gray-700 mb-4">{data.description}</p>
 
       <div className="mb-4">
         <h3 className="font-medium text-gray-800">Features:</h3>
         <ul className="list-disc list-inside text-gray-600">
-          {data.features.map((item, i) => (
+          {features.map((item, i) => (
             <li key={i}>{item}</li>
           ))}
         </ul>
@@ -37,9 +47,11 @@ const Subscription = ({ data }) => {
 
       <div className="flex justify-between items-center">
         <span className="text-yellow-500 flex items-center gap-2 font-semibold">
-          <FaStar></FaStar> {data.ratings} ({data.number_of_reviews} reviews)
+          <FaStar></FaStar> {ratings} ({number_of_reviews} reviews)
         </span>
-        <button className="btn btn-soft btn-success">View More</button>
+        <Link to={`/green/${id}`} className="btn btn-soft btn-success">
+          View More
+        </Link>
       </div>
     </div>
   );
