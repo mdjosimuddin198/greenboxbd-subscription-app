@@ -7,6 +7,7 @@ import AllPriceCard from "../components/AllPriceCard";
 import PriceDetails from "../components/PriceDetails";
 import Login from "../page/Login";
 import Register from "../page/Register";
+import PrivetRoute from "../components/PrivetRoute";
 
 const Router = createBrowserRouter([
   {
@@ -38,7 +39,11 @@ const Router = createBrowserRouter([
           const data = await res.json();
           return data;
         },
-        Component: PriceDetails,
+        element: (
+          <PrivetRoute>
+            <PriceDetails></PriceDetails>
+          </PrivetRoute>
+        ),
       },
     ],
   },

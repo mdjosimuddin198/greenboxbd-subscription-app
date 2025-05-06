@@ -1,9 +1,12 @@
-import React, { useState } from "react";
+import React, { use, useState } from "react";
 import { Link } from "react-router";
+import { AuthContext } from "../provider/AuthProvider";
 
 const Register = () => {
   const [errorMsg, setErrorMsg] = useState("");
   const [successMsg, setSuccessMsg] = useState(false);
+  const { creatAccount, updateUser, setLogedInUser } = use(AuthContext);
+
   const handleRegister = (e) => {
     e.preventDefault();
     setErrorMsg("");
@@ -15,16 +18,34 @@ const Register = () => {
     const email = form.email.value;
 
     if (password.length < 6) {
-      setErrorMsg("passworb must be 6 characters or longer ");
+      setErrorMsg("password must be 6 characters or longer ");
     } else if (!/[A-Z]/.test(password)) {
       setErrorMsg("Password must contain at least one uppercase letter.");
     } else if (!/[a-z]/.test(password)) {
       setErrorMsg(" Password must contain at least one lowercase letter.");
     } else {
+      creatAccount(email, password)
+        .then((result) => {
+          console.log(result);
+          const user = result.user;
+          updateUser({ displayName: name, photoURL: photo })
+            .then(() => {
+              console.log(user);
+              setLogedInUser({ ...user, displayName: name, photoURL: photo });
+            })
+            .catch((error) => {
+              console.log(error);
+              setLogedInUser(user);
+            });
+        })
+        .catch((error) => {
+          console.log(error);
+        });
+
       setSuccessMsg(true);
     }
 
-    console.log(name, photo, password, email);
+    // console.log(name, photo, password, email);
     return;
   };
   return (
