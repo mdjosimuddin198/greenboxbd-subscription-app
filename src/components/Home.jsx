@@ -4,6 +4,7 @@ import FeatureSection from "./FeatureSection";
 import { useLoaderData } from "react-router";
 import Subscription from "./Subscription";
 import AllPriceCard from "./AllPriceCard";
+import CustomarReview from "./CustomarReview";
 
 const Home = () => {
   const GreenBddata = useLoaderData();
@@ -20,6 +21,7 @@ const Home = () => {
         </h3>
 
         <AllPriceCard></AllPriceCard>
+        <CustomarReview></CustomarReview>
       </section>
     </div>
   );

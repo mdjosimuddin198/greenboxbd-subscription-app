@@ -4,13 +4,15 @@ const ReviewSection = () => {
   const [reviewText, setReviewText] = useState("");
   const [rating, setRating] = useState("");
   const [reviews, setReviews] = useState([]);
+  const [reviewError, setReviewError] = useState("");
 
   const handleSubmit = () => {
     if (!reviewText || !rating || rating < 1 || rating > 5) {
-      alert("Please enter a valid review and rating between 1-5");
+      // alert("Please enter a valid review and rating between 1-5");
+      setReviewError("Please enter a valid review and rating between 1-5");
       return;
     }
-
+    setReviewError("");
     const newReview = {
       id: Date.now(),
       text: reviewText,
@@ -64,7 +66,7 @@ const ReviewSection = () => {
             value={rating}
             onChange={(e) => setRating(e.target.value)}
           />
-
+          {reviewError && <p className="text-red-500">{reviewError}</p>}
           <button
             onClick={handleSubmit}
             className="bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700"

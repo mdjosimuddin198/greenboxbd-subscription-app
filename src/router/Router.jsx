@@ -8,12 +8,14 @@ import PriceDetails from "../components/PriceDetails";
 import Login from "../page/Login";
 import Register from "../page/Register";
 import PrivetRoute from "../components/PrivetRoute";
+import ErrorPage from "../page/ErrorPage";
+import Loading from "../components/Loading";
 
 const Router = createBrowserRouter([
   {
     path: "/",
     Component: MainLayout,
-    errorElement: <h3>error found</h3>,
+    errorElement: <ErrorPage></ErrorPage>,
     children: [
       {
         index: true,
@@ -23,6 +25,7 @@ const Router = createBrowserRouter([
           return data;
         },
         Component: Home,
+        hydrateFallbackElement: <Loading></Loading>,
       },
       {
         path: "/about",
@@ -44,6 +47,7 @@ const Router = createBrowserRouter([
             <PriceDetails></PriceDetails>
           </PrivetRoute>
         ),
+        hydrateFallbackElement: <Loading></Loading>,
       },
     ],
   },
