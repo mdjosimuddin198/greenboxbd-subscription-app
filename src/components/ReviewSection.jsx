@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { toast } from "react-toastify";
 
 const ReviewSection = () => {
   const [reviewText, setReviewText] = useState("");
@@ -10,6 +11,7 @@ const ReviewSection = () => {
     if (!reviewText || !rating || rating < 1 || rating > 5) {
       // alert("Please enter a valid review and rating between 1-5");
       setReviewError("Please enter a valid review and rating between 1-5");
+      toast.error(`Please enter a valid review and rating between 1-5`);
       return;
     }
     setReviewError("");

@@ -4,6 +4,7 @@ import { Link, NavLink } from "react-router";
 import userIcon from "../assets/user.png";
 import "../index.css";
 import { AuthContext } from "../provider/AuthProvider";
+import { toast } from "react-toastify";
 
 const NavBar = () => {
   const { logedInuser, setLogedInUser, logOutUser } = use(AuthContext);
@@ -12,6 +13,7 @@ const NavBar = () => {
       .then(() => {
         console.log("user log out successfully");
         setLogedInUser(null);
+        toast.success("Log Out Successfully");
       })
       .catch((error) => {
         console.log(error);
@@ -29,6 +31,9 @@ const NavBar = () => {
       </NavLink>
       <NavLink className="ml-5 p-2 rounded-xl text-xl" to="/cart">
         Cart
+      </NavLink>
+      <NavLink className="ml-5 p-2 rounded-xl  text-xl" to="/auth/register">
+        Register Now
       </NavLink>
     </>
   );

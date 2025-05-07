@@ -2,6 +2,7 @@ import React, { use } from "react";
 import NavBar from "../components/NavBar";
 import { Link, useLocation, useNavigate } from "react-router";
 import { AuthContext } from "../provider/AuthProvider";
+import { toast } from "react-toastify";
 
 const Login = () => {
   const { loginUser } = use(AuthContext);
@@ -12,12 +13,13 @@ const Login = () => {
     const form = e.target;
     const email = form.email.value;
     const password = form.password.value;
-    console.log(name, password);
+    // console.log(name, password);
 
     loginUser(email, password)
       .then((result) => {
         console.log(result);
         navigate(`${location.state ? location.state : "/"}`);
+        toast.success(`Loged In SuccessFully `);
       })
       .catch((error) => {
         console.log(error);

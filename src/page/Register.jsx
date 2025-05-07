@@ -1,10 +1,13 @@
 import React, { use, useState } from "react";
-import { Link } from "react-router";
+import { Link, useNavigate } from "react-router";
 import { AuthContext } from "../provider/AuthProvider";
 import { FiEyeOff } from "react-icons/fi";
 import { BsEye } from "react-icons/bs";
+import { toast } from "react-toastify";
+import NavBar from "../components/NavBar";
 
 const Register = () => {
+  const navigate = useNavigate();
   const [errorMsg, setErrorMsg] = useState("");
   const [successMsg, setSuccessMsg] = useState(false);
   const { creatAccount, updateUser, setLogedInUser } = use(AuthContext);
@@ -26,10 +29,13 @@ const Register = () => {
 
     if (password.length < 6) {
       setErrorMsg("password must be 6 characters or longer ");
+      toast.error(`password must be 6 characters or longer`);
     } else if (!/[A-Z]/.test(password)) {
       setErrorMsg("Password must contain at least one uppercase letter.");
+      toast.error("Password must contain at least one uppercase letter.");
     } else if (!/[a-z]/.test(password)) {
       setErrorMsg(" Password must contain at least one lowercase letter.");
+      toast.error(` Password must contain at least one lowercase letter`);
     } else {
       creatAccount(email, password)
         .then((result) => {
@@ -50,6 +56,8 @@ const Register = () => {
         });
 
       setSuccessMsg(true);
+      toast.success(`Account Create  SuccessFully `);
+      navigate("/");
     }
 
     // console.log(name, photo, password, email);
@@ -57,7 +65,8 @@ const Register = () => {
   };
   return (
     <>
-      <div className="card bg-base-100 mx-auto my-20 w-full max-w-sm shrink-0 shadow-2xl">
+      <NavBar></NavBar>
+      <div className="card bg-base-100 mx-auto my-5 w-full max-w-sm shrink-0 shadow-2xl">
         <div className="card-body">
           <form onSubmit={handleRegister} className="fieldset">
             {/* name  */}
