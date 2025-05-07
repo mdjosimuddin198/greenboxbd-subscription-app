@@ -39,11 +39,11 @@ const Register = () => {
     } else {
       creatAccount(email, password)
         .then((result) => {
-          console.log(result);
+          // console.log(result);
           const user = result.user;
           updateUser({ displayName: name, photoURL: photo })
             .then(() => {
-              console.log(user);
+              // console.log(user);
               setLogedInUser({ ...user, displayName: name, photoURL: photo });
             })
             .catch((error) => {

@@ -5,10 +5,10 @@ import Loading from "./Loading";
 
 const PrivetRoute = ({ children }) => {
   const { setLogedInUser, loading, logedInuser } = useContext(AuthContext);
-  console.log(loading);
+  // console.log(loading);
   const location = useLocation();
-  console.log(location);
-  console.log(location.pathname);
+  // console.log(location);
+  // console.log(location.pathname);
 
   if (loading) {
     return <Loading></Loading>;

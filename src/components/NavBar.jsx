@@ -11,7 +11,7 @@ const NavBar = () => {
   const handleLogOutUser = () => {
     logOutUser()
       .then(() => {
-        console.log("user log out successfully");
+        // console.log("user log out successfully");
         setLogedInUser(null);
         toast.success("Log Out Successfully");
       })
