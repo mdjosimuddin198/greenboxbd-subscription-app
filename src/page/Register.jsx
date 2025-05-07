@@ -1,11 +1,18 @@
 import React, { use, useState } from "react";
 import { Link } from "react-router";
 import { AuthContext } from "../provider/AuthProvider";
+import { FiEyeOff } from "react-icons/fi";
+import { BsEye } from "react-icons/bs";
 
 const Register = () => {
   const [errorMsg, setErrorMsg] = useState("");
   const [successMsg, setSuccessMsg] = useState(false);
   const { creatAccount, updateUser, setLogedInUser } = use(AuthContext);
+  const [showPass, setShowPass] = useState(false);
+
+  const handleshowPassword = () => {
+    setShowPass(!showPass);
+  };
 
   const handleRegister = (e) => {
     e.preventDefault();
@@ -80,16 +87,26 @@ const Register = () => {
               placeholder="Email"
               required
             />
-            {/* password */}
-            <label className="label text-xl">Password</label>
-            <input
-              type="password"
-              name="password"
-              className="input"
-              placeholder="Password"
-              required
-            />
-            <div></div>
+            {/* password  */}
+            <div className="relative">
+              <label className="label mt-4">Password</label>
+              <input
+                type={showPass ? "text" : "password"}
+                name="password"
+                className="input "
+                placeholder="Password"
+                required
+              />
+              <button
+                type="button"
+                onClick={handleshowPassword}
+                className="btn absolute right-4"
+              >
+                {showPass ? <FiEyeOff></FiEyeOff> : <BsEye></BsEye>}
+              </button>
+            </div>
+            {/* end  */}
+
             <button className="btn btn-neutral mt-4">Register Now</button>
             <p className="text-sm text-base-200">
               Allready have account{" "}
