@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { FaStar } from "react-icons/fa6";
 import { useLoaderData, useParams } from "react-router";
 import ReviewSection from "./ReviewSection";
+import { Helmet } from "react-helmet";
 
 const PriceDetails = () => {
   const [pricecard, setPriceCard] = useState({});
@@ -28,6 +29,9 @@ const PriceDetails = () => {
   } = pricecard;
   return (
     <>
+      <Helmet>
+        <title> Price-Details| GreenBox BD</title>
+      </Helmet>
       <div className="hero  min-h-screen">
         <div className="hero-content  flex-col lg:flex-row">
           <img

@@ -11,6 +11,7 @@ import PrivetRoute from "../components/PrivetRoute";
 import ErrorPage from "../page/ErrorPage";
 import Loading from "../components/Loading";
 import MyProfile from "../components/MyProfile";
+import ForgotPassword from "../page/ForgotPassword";
 
 const Router = createBrowserRouter([
   {
@@ -28,14 +29,7 @@ const Router = createBrowserRouter([
         Component: Home,
         hydrateFallbackElement: <Loading></Loading>,
       },
-      {
-        path: "/about",
-        element: <p>page not found </p>,
-      },
-      {
-        path: "/cart",
-        element: <p>cart section </p>,
-      },
+
       {
         path: "green/:id",
         loader: async () => {
@@ -55,6 +49,10 @@ const Router = createBrowserRouter([
   {
     path: "/auth/login",
     Component: Login,
+  },
+  {
+    path: "/auth/login/forget-password",
+    Component: ForgotPassword,
   },
   {
     path: "/auth/register",

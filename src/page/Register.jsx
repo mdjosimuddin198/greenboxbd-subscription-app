@@ -5,6 +5,7 @@ import { FiEyeOff } from "react-icons/fi";
 import { BsEye } from "react-icons/bs";
 import { toast } from "react-toastify";
 import NavBar from "../components/NavBar";
+import { Helmet } from "react-helmet";
 
 const Register = () => {
   const navigate = useNavigate();
@@ -66,6 +67,9 @@ const Register = () => {
   };
   return (
     <>
+      <Helmet>
+        <title>Resister now|GreenBox BD</title>
+      </Helmet>
       <NavBar></NavBar>
       <div className="card bg-base-100 mx-auto my-5 w-full max-w-sm shrink-0 shadow-2xl">
         <div className="card-body">

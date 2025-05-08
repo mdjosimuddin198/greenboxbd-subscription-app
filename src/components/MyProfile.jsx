@@ -2,6 +2,7 @@ import React, { useContext, useState } from "react";
 import { AuthContext } from "../provider/AuthProvider";
 import { toast } from "react-toastify";
 import NavBar from "./NavBar";
+import { Helmet } from "react-helmet";
 
 const MyProfile = () => {
   const { updateUser, logedInuser, setLogedInUser } = useContext(AuthContext);
@@ -33,6 +34,9 @@ const MyProfile = () => {
 
   return (
     <>
+      <Helmet>
+        <title>My Profile | GreenBox BD</title>
+      </Helmet>
       <NavBar></NavBar>
       <div className="min-h-screen bg-gray-100 flex items-center justify-center p-4">
         <div className="bg-white shadow-2xl rounded-2xl w-full max-w-2xl p-8">
@@ -75,7 +79,7 @@ const MyProfile = () => {
             </div>
             <button
               type="submit"
-              className="w-full bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700 transition"
+              className="w-full bg-base-200 text-white py-2 rounded-lg hover:skew-1 transition"
             >
               Save Changes
             </button>

@@ -1,14 +1,17 @@
-import React, { use } from "react";
+import React, { use, useState } from "react";
 import NavBar from "../components/NavBar";
 import { Link, useLocation, useNavigate } from "react-router";
 import { AuthContext } from "../provider/AuthProvider";
 import { toast } from "react-toastify";
 import { FcGoogle } from "react-icons/fc";
+import { Helmet } from "react-helmet";
 
 const Login = () => {
   const { loginUser, handlegoogle } = use(AuthContext);
   const location = useLocation();
   const navigate = useNavigate();
+  const [email, setEmail] = useState("");
+
   const handleLogin = (e) => {
     e.preventDefault();
     const form = e.target;
@@ -28,6 +31,11 @@ const Login = () => {
       });
   };
 
+  const handleForgotPassword = (e) => {
+    e.preventDefault();
+    const email = document.querySelector('input[name="email"]').value;
+    navigate("/auth/login/forget-password", { state: { email } });
+  };
   const handleGoogoleLogin = () => {
     // console.log("hello login ");
     handlegoogle()
@@ -43,6 +51,9 @@ const Login = () => {
   };
   return (
     <>
+      <Helmet>
+        <title>Login page | GreenBox BD </title>
+      </Helmet>
       <NavBar></NavBar>
       <div className="card bg-base-100 mx-auto my-20 w-full max-w-sm shrink-0 shadow-2xl">
         <div className="card-body">
@@ -62,7 +73,14 @@ const Login = () => {
               placeholder="Password"
             />
             <div>
-              <a className="link link-hover">Forgot password?</a>
+              <Link
+                to="/auth/login/forget-password"
+                state={{ email }}
+                onClick={handleForgotPassword}
+                className="link link-hover text-blue-600"
+              >
+                Forgot password?
+              </Link>
             </div>
             <button className="btn btn-neutral mt-4">LogIn Now</button>
             <p className="text-sm text-base-200">

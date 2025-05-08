@@ -5,6 +5,7 @@ import userIcon from "../assets/user.png";
 import "../index.css";
 import { AuthContext } from "../provider/AuthProvider";
 import { toast } from "react-toastify";
+import { Helmet } from "react-helmet";
 
 const NavBar = () => {
   const { logedInuser, setLogedInUser, logOutUser } = use(AuthContext);
@@ -27,9 +28,6 @@ const NavBar = () => {
         Home
       </NavLink>
 
-      <NavLink className="ml-5  rounded-xl p-2 text-xl" to="/about">
-        About
-      </NavLink>
       <NavLink className="ml-5 p-2 rounded-xl text-xl" to="/cart">
         Cart
       </NavLink>

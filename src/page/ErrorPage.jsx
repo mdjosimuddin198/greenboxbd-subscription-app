@@ -1,4 +1,5 @@
 import React from "react";
+import { Helmet } from "react-helmet";
 
 import { useNavigate } from "react-router";
 
@@ -9,6 +10,9 @@ const ErrorPage = () => {
   };
   return (
     <div>
+      <Helmet>
+        <title>Error Page</title>
+      </Helmet>
       <div className="flex flex-col  justify-center items-center mt-16">
         <div className=" rounded-2xl  border">
           <img

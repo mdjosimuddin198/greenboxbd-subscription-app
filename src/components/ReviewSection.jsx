@@ -14,6 +14,7 @@ const ReviewSection = () => {
       toast.error(`Please enter a valid review and rating between 1-5`);
       return;
     }
+    toast.success("review added");
     setReviewError("");
     const newReview = {
       id: Date.now(),

@@ -5,12 +5,16 @@ import { useLoaderData } from "react-router";
 import Subscription from "./Subscription";
 import AllPriceCard from "./AllPriceCard";
 import CustomarReview from "./CustomarReview";
+import { Helmet } from "react-helmet";
 
 const Home = () => {
   const GreenBddata = useLoaderData();
 
   return (
     <div>
+      <Helmet>
+        <title>GreenBox BD | Home</title>
+      </Helmet>
       <Banar></Banar>
       <FeatureSection></FeatureSection>
 
