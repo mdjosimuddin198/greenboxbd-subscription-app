@@ -3,9 +3,10 @@ import NavBar from "../components/NavBar";
 import { Link, useLocation, useNavigate } from "react-router";
 import { AuthContext } from "../provider/AuthProvider";
 import { toast } from "react-toastify";
+import { FcGoogle } from "react-icons/fc";
 
 const Login = () => {
-  const { loginUser } = use(AuthContext);
+  const { loginUser, handlegoogle } = use(AuthContext);
   const location = useLocation();
   const navigate = useNavigate();
   const handleLogin = (e) => {
@@ -23,9 +24,23 @@ const Login = () => {
       })
       .catch((error) => {
         console.log(error);
+        toast.error("error found");
       });
   };
 
+  const handleGoogoleLogin = () => {
+    // console.log("hello login ");
+    handlegoogle()
+      .then((result) => {
+        navigate(`${location.state ? location.state : "/"}`);
+        toast.success(`Loged In SuccessFully `);
+        console.log(result);
+      })
+      .catch((error) => {
+        console.log(error);
+        toast.error("error found");
+      });
+  };
   return (
     <>
       <NavBar></NavBar>
@@ -58,6 +73,14 @@ const Login = () => {
               </Link>
             </p>
           </form>
+          {/* Google */}
+          <button
+            onClick={handleGoogoleLogin}
+            className="btn bg-white text-black border-[#e5e5e5]"
+          >
+            <FcGoogle></FcGoogle>
+            Login with Google
+          </button>
         </div>
       </div>
     </>

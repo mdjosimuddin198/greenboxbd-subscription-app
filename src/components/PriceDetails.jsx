@@ -9,11 +9,12 @@ const PriceDetails = () => {
   // console.log(data);
   const { id } = useParams();
   useEffect(() => {
-    const targetPriceCard = data.find((singlePrice) => singlePrice.id == id);
+    const targetPriceCard = data.find((singlePrice) => singlePrice.title == id);
     setPriceCard(targetPriceCard);
   }, [id, data]);
 
   const {
+    title,
     thumbnail,
     banner,
     description,

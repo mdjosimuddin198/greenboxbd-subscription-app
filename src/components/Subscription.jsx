@@ -5,6 +5,7 @@ import { Link } from "react-router";
 const Subscription = ({ data }) => {
   // console.log(data);
   const {
+    title,
     id,
     thumbnail,
     name,
@@ -50,7 +51,7 @@ const Subscription = ({ data }) => {
         <span className="text-secondary flex items-center gap-2 font-semibold">
           <FaStar></FaStar> {ratings} ({number_of_reviews} reviews)
         </span>
-        <Link to={`/green/${id}`} className="btn btn-soft btn-success">
+        <Link to={`/green/${title}`} className="btn btn-soft btn-success">
           View More
         </Link>
       </div>

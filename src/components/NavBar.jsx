@@ -17,6 +17,7 @@ const NavBar = () => {
       })
       .catch((error) => {
         console.log(error);
+        toast.error("error found");
       });
   };
 
@@ -34,6 +35,12 @@ const NavBar = () => {
       </NavLink>
       <NavLink className="ml-5 p-2 rounded-xl  text-xl" to="/auth/register">
         Register Now
+      </NavLink>
+      <NavLink
+        className="ml-5 p-2 rounded-xl  text-xl"
+        to="/green_box_bd/profile"
+      >
+        Profile
       </NavLink>
     </>
   );

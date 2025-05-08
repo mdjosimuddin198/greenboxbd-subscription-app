@@ -10,6 +10,7 @@ import Register from "../page/Register";
 import PrivetRoute from "../components/PrivetRoute";
 import ErrorPage from "../page/ErrorPage";
 import Loading from "../components/Loading";
+import MyProfile from "../components/MyProfile";
 
 const Router = createBrowserRouter([
   {
@@ -58,6 +59,14 @@ const Router = createBrowserRouter([
   {
     path: "/auth/register",
     Component: Register,
+  },
+  {
+    path: "/green_box_bd/profile",
+    element: (
+      <PrivetRoute>
+        <MyProfile></MyProfile>
+      </PrivetRoute>
+    ),
   },
 ]);
 

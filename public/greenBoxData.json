@@ -1,5 +1,6 @@
 [
   {
+    "title": "Weekly_Veggie_Box",
     "id": 1,
     "name": "Weekly Veggie Box",
     "thumbnail": "https://i.ibb.co.com/qYd1gQX6/image.png",
@@ -22,6 +23,7 @@
     "number_of_reviews": 120
   },
   {
+    "title": "Monthly_Green_Box",
     "id": 2,
     "name": "Monthly Green Box",
     "thumbnail": "https://i.ibb.co.com/hRghY0TX/image.png",
@@ -44,6 +46,7 @@
     "number_of_reviews": 212
   },
   {
+    "title": "Family_Value_Pack",
     "id": 3,
     "name": "Family Value Pack",
     "thumbnail": "https://i.ibb.co.com/s9VJ9bHn/image.png",
@@ -66,6 +69,7 @@
     "number_of_reviews": 180
   },
   {
+    "title": "Trial_Veggie_Box",
     "id": 4,
     "name": "Trial Veggie Box",
     "thumbnail": "https://i.ibb.co.com/DHbQ7JDq/image.png",
@@ -88,6 +92,7 @@
     "number_of_reviews": 65
   },
   {
+    "title": "Organic_Green_Box",
     "id": 5,
     "name": "Organic Green Box",
     "thumbnail": "https://i.ibb.co.com/5hhRQtLw/image.png",
@@ -110,6 +115,7 @@
     "number_of_reviews": 98
   },
   {
+    "title": "Veggie_Fruit_Combo",
     "id": 6,
     "name": "Veggie + Fruit Combo",
     "thumbnail": "https://i.ibb.co.com/Cs8gNwp4/image.png",
