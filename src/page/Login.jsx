@@ -5,6 +5,8 @@ import { AuthContext } from "../provider/AuthProvider";
 import { toast } from "react-toastify";
 import { FcGoogle } from "react-icons/fc";
 import { Helmet } from "react-helmet";
+import Lottie from "lottie-react";
+import signUplottie from "../assets/signUp.json";
 
 const Login = () => {
   const { loginUser, handlegoogle } = use(AuthContext);
@@ -55,52 +57,57 @@ const Login = () => {
         <title>Login page | GreenBox BD </title>
       </Helmet>
       <NavBar></NavBar>
-      <div className="card bg-base-100 mx-auto my-20 w-full max-w-sm shrink-0 shadow-2xl">
-        <div className="card-body">
-          <form onSubmit={handleLogin} className="fieldset">
-            <label className="label text-xl">Email</label>
-            <input
-              type="email"
-              name="email"
-              className="input"
-              placeholder="Email"
-            />
-            <label className="label text-xl">Password</label>
-            <input
-              type="password"
-              name="password"
-              className="input"
-              placeholder="Password"
-            />
-            <div>
-              <Link
-                to="/auth/login/forget-password"
-                state={{ email }}
-                onClick={handleForgotPassword}
-                className="link link-hover text-blue-600"
-              >
-                Forgot password?
-              </Link>
-            </div>
-            <button className="btn btn-neutral mt-4">LogIn Now</button>
-            <p className="text-sm text-base-200">
-              Don't have account yet{" "}
-              <Link className="text-blue-400 underline" to="/auth/register">
-                {"   "}
-                Register Now{" "}
-              </Link>
-            </p>
-          </form>
-          {/* Google */}
-          <button
-            onClick={handleGoogoleLogin}
-            className="btn bg-white text-black border-[#e5e5e5]"
-          >
-            <FcGoogle></FcGoogle>
-            Login with Google
-          </button>
+      <section className="flex flex-col md:flex-row justify-around">
+        <div className="md:w-[450px] w-[200px] mx-auto">
+          <Lottie animationData={signUplottie} loop={true}></Lottie>
         </div>
-      </div>
+        <div className="card bg-base-100 mx-auto my-20 w-full max-w-sm shrink-0 shadow-2xl">
+          <div className="card-body">
+            <form onSubmit={handleLogin} className="fieldset">
+              <label className="label text-xl">Email</label>
+              <input
+                type="email"
+                name="email"
+                className="input"
+                placeholder="Email"
+              />
+              <label className="label text-xl">Password</label>
+              <input
+                type="password"
+                name="password"
+                className="input"
+                placeholder="Password"
+              />
+              <div>
+                <Link
+                  to="/auth/login/forget-password"
+                  state={{ email }}
+                  onClick={handleForgotPassword}
+                  className="link link-hover text-blue-600"
+                >
+                  Forgot password?
+                </Link>
+              </div>
+              <button className="btn btn-neutral mt-4">LogIn Now</button>
+              <p className="text-sm text-base-200">
+                Don't have account yet{" "}
+                <Link className="text-blue-400 underline" to="/auth/register">
+                  {"   "}
+                  Register Now{" "}
+                </Link>
+              </p>
+            </form>
+            {/* Google */}
+            <button
+              onClick={handleGoogoleLogin}
+              className="btn bg-white text-black border-[#e5e5e5]"
+            >
+              <FcGoogle></FcGoogle>
+              Login with Google
+            </button>
+          </div>
+        </div>
+      </section>
     </>
   );
 };

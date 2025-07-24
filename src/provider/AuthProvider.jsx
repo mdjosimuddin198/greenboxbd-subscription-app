@@ -9,7 +9,7 @@ import {
   updateProfile,
 } from "firebase/auth";
 import React, { createContext, useEffect, useState } from "react";
-import { useAuthState } from "react-firebase-hooks/auth";
+
 import { app } from "../firebase/firebase.config";
 export const AuthContext = createContext();
 const provider = new GoogleAuthProvider();
