@@ -7,11 +7,12 @@ import AllPriceCard from "../components/AllPriceCard";
 import PriceDetails from "../components/PriceDetails";
 import Login from "../page/Login";
 import Register from "../page/Register";
-import PrivetRoute from "../components/PrivetRoute";
+import PrivetRoute from "./PrivetRoute";
 import ErrorPage from "../page/ErrorPage";
 import Loading from "../components/Loading";
 import MyProfile from "../components/MyProfile";
 import ForgotPassword from "../page/ForgotPassword";
+import PublicRoute from "./PublicRoute";
 
 const Router = createBrowserRouter([
   {
@@ -48,7 +49,11 @@ const Router = createBrowserRouter([
   },
   {
     path: "/auth/login",
-    Component: Login,
+    element: (
+      <PublicRoute>
+        <Login></Login>
+      </PublicRoute>
+    ),
   },
   {
     path: "/auth/login/forget-password",
@@ -56,7 +61,11 @@ const Router = createBrowserRouter([
   },
   {
     path: "/auth/register",
-    Component: Register,
+    element: (
+      <PublicRoute>
+        <Register></Register>
+      </PublicRoute>
+    ),
   },
   {
     path: "/green_box_bd/profile",

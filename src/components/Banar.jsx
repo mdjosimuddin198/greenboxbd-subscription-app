@@ -6,7 +6,7 @@ import Slider from "./Slider";
 const Banar = () => {
   return (
     <div>
-      <div className="hero bg-primary rounded-2xl min-h-screen">
+      <div className="hero bg-primary rounded-2xl">
         <div className="hero-content flex-col  justify-between lg:flex-row-reverse">
           {/* <img
             src={heroImg}

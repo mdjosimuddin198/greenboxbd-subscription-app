@@ -31,9 +31,13 @@ const NavBar = () => {
       <NavLink className="ml-5 p-2 rounded-xl text-xl" to="/cart">
         Cart
       </NavLink>
-      <NavLink className="ml-5 p-2 rounded-xl  text-xl" to="/auth/register">
-        Register Now
-      </NavLink>
+      {logedInuser ? null : (
+        <>
+          <NavLink className="ml-5 p-2 rounded-xl  text-xl" to="/auth/register">
+            Register Now
+          </NavLink>
+        </>
+      )}
       <NavLink
         className="ml-5 p-2 rounded-xl  text-xl"
         to="/green_box_bd/profile"

@@ -8,7 +8,7 @@ import Footer from "../components/Footer";
 const MainLayout = () => {
   return (
     <>
-      <header className="w-11/12  mx-auto">
+      <header className="w-11/12 sticky top-0 z-20  mx-auto">
         <NavBar></NavBar>
       </header>
       <main className="w-11/12 mx-auto py-6 ">

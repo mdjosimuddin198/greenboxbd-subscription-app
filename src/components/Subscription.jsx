@@ -38,14 +38,14 @@ const Subscription = ({ data }) => {
         </ul>
       </div>
 
-      <div className="mb-4">
+      {/* <div className="mb-4">
         <h3 className="font-medium text-gray-800">Subscription Benefits:</h3>
         <ul className="list-disc list-inside text-gray-600">
           {subscription_benefits.map((item, i) => (
             <li key={i}>{item}</li>
           ))}
         </ul>
-      </div>
+      </div> */}
 
       <div className="flex justify-between items-center">
         <span className="text-secondary flex items-center gap-2 font-semibold">

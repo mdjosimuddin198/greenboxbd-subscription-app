@@ -71,10 +71,16 @@ const PriceDetails = () => {
                 <FaStar></FaStar> {ratings} ({number_of_reviews} reviews)
               </span>
             </div>
+            <div className="flex flex-col md:flex-row py-4 gap-4">
+              <button className="btn text-white ">Order Now</button>
+              <button className="btn text-white  ">Add To Cart</button>
+            </div>
           </div>
         </div>
       </div>
-      <ReviewSection></ReviewSection>
+
+      {/* remove this rivew section from here i will add this section in my buy section list  */}
+      {/* <ReviewSection></ReviewSection>  */}
     </>
   );
 };

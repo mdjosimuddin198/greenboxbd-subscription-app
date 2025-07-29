@@ -11,7 +11,8 @@ const Register = () => {
   const navigate = useNavigate();
   const [errorMsg, setErrorMsg] = useState("");
   const [successMsg, setSuccessMsg] = useState(false);
-  const { creatAccount, updateUser, setLogedInUser } = use(AuthContext);
+  const { creatAccount, updateUser, logedInuser, setLogedInUser } =
+    use(AuthContext);
   const [showPass, setShowPass] = useState(false);
 
   const handleshowPassword = () => {
