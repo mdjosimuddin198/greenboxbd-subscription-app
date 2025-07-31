@@ -27,6 +27,9 @@ const NavBar = () => {
       <NavLink className="ml-5 p-2 rounded-xl  text-xl" to="/">
         Home
       </NavLink>
+      <NavLink className="ml-5 p-2 rounded-xl  text-xl" to="/products">
+        Products
+      </NavLink>
 
       <NavLink className="ml-5 p-2 rounded-xl text-xl" to="/cart">
         Cart

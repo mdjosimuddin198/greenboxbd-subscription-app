@@ -32,16 +32,6 @@ const featuresRight = [
   },
 ];
 
-const FeatureBox = ({ title, desc }) => (
-  <div className="mb-10">
-    <h3 className="text-xl font-semibold flex items-start gap-2 text-gray-800">
-      <BsCheckCircle className="text-green-600 mt-1" />
-      {title}
-    </h3>
-    <p className="text-gray-600 mt-2">{desc}</p>
-  </div>
-);
-
 const FeatureSection = () => {
   return (
     <section className="py-20 bg-white">
@@ -78,5 +68,15 @@ const FeatureSection = () => {
     </section>
   );
 };
+
+const FeatureBox = ({ title, desc }) => (
+  <div className="mb-10">
+    <h3 className="text-xl font-semibold flex items-start gap-2 text-gray-800">
+      <BsCheckCircle className="text-green-600 mt-1" />
+      {title}
+    </h3>
+    <p className="text-gray-600 mt-2">{desc}</p>
+  </div>
+);
 
 export default FeatureSection;

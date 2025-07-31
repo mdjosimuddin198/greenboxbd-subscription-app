@@ -19,11 +19,6 @@ const Home = () => {
       <FeatureSection></FeatureSection>
 
       <section className="py-4">
-        <h3 className="text-5xl my-4 text-center ">
-          Get Box{" "}
-          <span className="text-bold text-base-200 ">Products Separately</span>
-        </h3>
-
         <AllPriceCard></AllPriceCard>
         <CustomarReview></CustomarReview>
       </section>

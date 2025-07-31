@@ -32,6 +32,16 @@ const Router = createBrowserRouter([
       },
 
       {
+        path: "/products",
+        loader: async () => {
+          const res = await fetch("/allProducts.json");
+          const data = await res.json();
+          return data;
+        },
+        Component: AllPriceCard,
+      },
+
+      {
         path: "green/:id",
         loader: async () => {
           const res = await fetch("/greenBoxData.json");
@@ -47,6 +57,7 @@ const Router = createBrowserRouter([
       },
     ],
   },
+
   {
     path: "/auth/login",
     element: (
