@@ -6,7 +6,7 @@ const AllPriceCard = () => {
   const GreenBddata = useLoaderData();
   // console.log(GreenBddata);
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 ">
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 py-4  shadow-5xl shadow-amber-00 ">
       {GreenBddata.map((data) => (
         <Subscription key={data.id} data={data}></Subscription>
       ))}

@@ -3,15 +3,16 @@ import { FaStar } from "react-icons/fa";
 import sliderImg from "../assets/review.jpeg";
 
 const ReviewDetails = ({ reviewMsg }) => {
-  const { name, rating, review } = reviewMsg;
+  const { name, rating, review, img } = reviewMsg;
+  console.log(rating);
 
   return (
-    <div className="hero-content w-full justify-between flex-col lg:flex-row ">
-      <div>
-        <img className="md:w-[550px]" src={sliderImg} alt="" />
+    <div className="hero-content max-h-[300px] w-full justify-between flex-col lg:flex-row ">
+      <div className="h-[300px] w-1/2 ">
+        <img className="md:w-[550px] rounded-lg" src={img} alt="" />
       </div>
-      <div className="bg-white shadow-md rounded-lg  p-6  mx-auto">
-        <div className="flex items-center text-green-500 mb-3">
+      <div className="h-[300px] w-1/2 flex items-center justify-center flex-col  p-6  mx-auto">
+        <div className="flex items-center justify-center text-green-500 mb-3">
           {[...Array(rating)].map((_, star) => (
             <FaStar key={star} />
           ))}

@@ -136,5 +136,143 @@
     ],
     "ratings": 4.7,
     "number_of_reviews": 140
+  },
+  {
+    "title": "Weekly_Veggie_Box",
+    "id": 7,
+    "name": "Weekly Veggie Box",
+    "thumbnail": "https://i.ibb.co.com/qYd1gQX6/image.png",
+    "banner": "https://i.ibb.co.com/qYd1gQX6/image.png",
+    "frequency": "Weekly",
+    "price": 499.0,
+    "description": "Perfect for individuals or small families. Enjoy fresh vegetables every week delivered to your doorstep.",
+    "category": "Vegetables",
+    "features": [
+      "8-10 varieties of fresh vegetables",
+      "Locally sourced produce",
+      "Free delivery inside Dhaka"
+    ],
+    "subscription_benefits": [
+      "Flexible pause/resume option",
+      "Weekly menu email",
+      "Member-only offers"
+    ],
+    "ratings": 4.6,
+    "number_of_reviews": 120
+  },
+  {
+    "title": "Monthly_Fruit_Box",
+    "id": 8,
+    "name": "Monthly Fruit Box",
+    "thumbnail": "https://i.ibb.co.com/3R6PjKQ/fruit-box.png",
+    "banner": "https://i.ibb.co.com/3R6PjKQ/fruit-box.png",
+    "frequency": "Monthly",
+    "price": 999.0,
+    "description": "A curated box of seasonal fruits delivered every month for a healthy lifestyle.",
+    "category": "Fruits",
+    "features": [
+      "10+ varieties of fruits",
+      "Imported and local mix",
+      "Eco-friendly packaging"
+    ],
+    "subscription_benefits": [
+      "Nutritionist-recommended picks",
+      "Monthly health tips",
+      "Exclusive discounts"
+    ],
+    "ratings": 4.8,
+    "number_of_reviews": 98
+  },
+  {
+    "title": "Biweekly_Salad_Box",
+    "id": 9,
+    "name": "Biweekly Salad Box",
+    "thumbnail": "https://i.ibb.co.com/sR2jRnX/salad-box.png",
+    "banner": "https://i.ibb.co.com/sR2jRnX/salad-box.png",
+    "frequency": "Biweekly",
+    "price": 699.0,
+    "description": "Get fresh greens and salad ingredients every two weeks. Ideal for healthy eaters.",
+    "category": "Salads",
+    "features": [
+      "Pre-washed and ready-to-eat",
+      "Low-calorie options",
+      "Reusable containers"
+    ],
+    "subscription_benefits": [
+      "Free recipe eBook",
+      "Dietician-approved content",
+      "Priority support"
+    ],
+    "ratings": 4.5,
+    "number_of_reviews": 87
+  },
+  {
+    "title": "Weekly_Herbs_Kit",
+    "id": 10,
+    "name": "Weekly Herbs Kit",
+    "thumbnail": "https://i.ibb.co.com/F6k0kH1/herbs-kit.png",
+    "banner": "https://i.ibb.co.com/F6k0kH1/herbs-kit.png",
+    "frequency": "Weekly",
+    "price": 299.0,
+    "description": "Fresh herbs delivered weekly to enhance your cooking and bring aroma to your kitchen.",
+    "category": "Herbs",
+    "features": [
+      "6-8 types of herbs",
+      "Organic & pesticide-free",
+      "Compact storage bags"
+    ],
+    "subscription_benefits": [
+      "Free growing tips",
+      "Custom herb selection",
+      "Referral rewards"
+    ],
+    "ratings": 4.7,
+    "number_of_reviews": 74
+  },
+  {
+    "title": "Monthly_Organic_Box",
+    "id": 11,
+    "name": "Monthly Organic Box",
+    "thumbnail": "https://i.ibb.co.com/YdFtLXt/organic-box.png",
+    "banner": "https://i.ibb.co.com/YdFtLXt/organic-box.png",
+    "frequency": "Monthly",
+    "price": 1299.0,
+    "description": "Carefully picked organic vegetables and fruits every month. Best for conscious consumers.",
+    "category": "Organic",
+    "features": [
+      "Certified organic products",
+      "No GMO or pesticides",
+      "Supports local farmers"
+    ],
+    "subscription_benefits": [
+      "Free tote bag",
+      "Surprise seasonal item",
+      "Early access to new products"
+    ],
+    "ratings": 4.9,
+    "number_of_reviews": 150
+  },
+  {
+    "title": "Weekly_Juice_Box",
+    "id": 12,
+    "name": "Weekly Juice Box",
+    "thumbnail": "https://i.ibb.co.com/PZKfPHL/juice-box.png",
+    "banner": "https://i.ibb.co.com/PZKfPHL/juice-box.png",
+    "frequency": "Weekly",
+    "price": 850.0,
+    "description": "A refreshing box of cold-pressed juices delivered to your home every week.",
+    "category": "Beverages",
+    "features": [
+      "4-6 bottles per week",
+      "No added sugar",
+      "100% natural ingredients"
+    ],
+    "subscription_benefits": [
+      "Reusable bottles discount",
+      "Juice cleanse guide",
+      "VIP customer rewards"
+    ],
+    "ratings": 4.4,
+    "number_of_reviews": 66
   }
 ]

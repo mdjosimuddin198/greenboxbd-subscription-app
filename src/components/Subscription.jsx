@@ -18,7 +18,7 @@ const Subscription = ({ data }) => {
   } = data;
 
   return (
-    <div className="max-w-sm rounded-2xl shadow-lg p-6 bg-white border border-gray-200">
+    <div className="max-w-sm rounded-2xl hover:translate-y-1 shadow hover:shadow-amber-400 p-6 transition-all  bg-white border border-gray-200">
       <img
         src={thumbnail}
         alt={name}
@@ -26,7 +26,7 @@ const Subscription = ({ data }) => {
       />
       <h2 className="text-2xl font-semibold text-base-200 mb-2">{name}</h2>
       <p className="text-3xl text-gray-600 mb-2">
-        {frequency} —<span className="text-secondary font-bold"> ${price}</span>
+        {frequency} —<span className="text-base-200 font-bold"> ${price}</span>
       </p>
 
       <div className="mb-4">
@@ -48,7 +48,7 @@ const Subscription = ({ data }) => {
       </div> */}
 
       <div className="flex justify-between items-center">
-        <span className="text-secondary flex items-center gap-2 font-semibold">
+        <span className="text-gray-600 flex items-center gap-2 font-semibold">
           <FaStar></FaStar> {ratings} ({number_of_reviews} reviews)
         </span>
         <Link to={`/green/${title}`} className="btn btn-soft btn-success">

@@ -40,11 +40,13 @@ const PriceDetails = () => {
             className=" w-4xl rounded-lg shadow-2xl"
           />
           <div>
-            <h1 className="text-5xl font-bold">{name}!</h1>
+            <h1 className="text-5xl text-center text-base-200 font-bold">
+              {name}!
+            </h1>
             <p className="py-6">{description}</p>
             <p className="text-3xl text-gray-600 mb-2">
               {frequency} —
-              <span className="text-secondary font-bold"> ${price}</span>
+              <span className="text-base-200 font-bold"> ${price}</span>
             </p>
             <div className="mb-4">
               <h3 className="font-medium text-gray-800">Features:</h3>
@@ -67,7 +69,7 @@ const PriceDetails = () => {
             </div>
 
             <div className="flex justify-between items-center">
-              <span className="text-secondary flex items-center gap-2 font-semibold">
+              <span className=" flex items-center gap-2 font-semibold">
                 <FaStar></FaStar> {ratings} ({number_of_reviews} reviews)
               </span>
             </div>
